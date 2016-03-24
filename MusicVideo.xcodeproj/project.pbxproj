@@ -14,6 +14,7 @@
 		0E6DABB01CA32D2C00711D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6DABAE1CA32D2C00711D6F /* LaunchScreen.storyboard */; };
 		0E6DABBB1CA32D2C00711D6F /* MusicVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DABBA1CA32D2C00711D6F /* MusicVideoTests.swift */; };
 		0E6DABC61CA32D2C00711D6F /* MusicVideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DABC51CA32D2C00711D6F /* MusicVideoUITests.swift */; };
+		0E94A36C1CA44A1D00293676 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E94A36B1CA44A1D00293676 /* APIManager.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0E6DABC11CA32D2C00711D6F /* MusicVideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicVideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6DABC51CA32D2C00711D6F /* MusicVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoUITests.swift; sourceTree = "<group>"; };
 		0E6DABC71CA32D2C00711D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E94A36B1CA44A1D00293676 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		0E6DABD31CA332A700711D6F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E94A36B1CA44A1D00293676 /* APIManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E94A36C1CA44A1D00293676 /* APIManager.swift in Sources */,
 				0E6DABA81CA32D2C00711D6F /* ViewController.swift in Sources */,
 				0E6DABA61CA32D2C00711D6F /* AppDelegate.swift in Sources */,
 			);
@@ -515,6 +519,7 @@
 				0E6DABCC1CA32D2C00711D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E6DABCD1CA32D2C00711D6F /* Build configuration list for PBXNativeTarget "MusicVideoTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +528,7 @@
 				0E6DABCF1CA32D2C00711D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E6DABD01CA32D2C00711D6F /* Build configuration list for PBXNativeTarget "MusicVideoUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +537,7 @@
 				0E6DABD21CA32D2C00711D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
