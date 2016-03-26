@@ -19,8 +19,10 @@ class MusicVideoTVC: UITableViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector:
             "reachabilityStatusChanged", name: "reachabilityChanged", object: nil)
         
+        
         reachabilityStatusChanged()
         
+      
     }
     
     func didLoadData(videos: [Videos]){
@@ -73,14 +75,14 @@ class MusicVideoTVC: UITableViewController {
 
                 
             }
-                    default:
+        default:
             view.backgroundColor = UIColor.greenColor()
             if videos.count > 0
             {
-                runAPI()
+                print("do not refresh API")
             }
             else{
-                print("do not refresh API")
+                runAPI()
             }
            
         }
