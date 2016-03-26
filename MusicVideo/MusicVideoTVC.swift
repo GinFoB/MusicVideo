@@ -11,6 +11,7 @@ import UIKit
 class MusicVideoTVC: UITableViewController {
 
     var videos = [Videos]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +20,6 @@ class MusicVideoTVC: UITableViewController {
             "reachabilityStatusChanged", name: "reachabilityChanged", object: nil)
         
         reachabilityStatusChanged()
-        
-        let api = APIManager()
-        api.loadData("https://itunes.apple.com/us/rss/topaudiobooks/limit=50/json",
-            completion: didLoadData)
         
     }
     
@@ -47,17 +44,47 @@ class MusicVideoTVC: UITableViewController {
     
     func reachabilityStatusChanged() {
         switch reachabilityStatus {
-        case NOACCESS : view.backgroundColor = UIColor.redColor()
-        //displayLabel.text = "No Internet"
-            
-        case WIFI : view.backgroundColor = UIColor.greenColor()
-        //displayLabel.text = "Reachabity with WIFI"
-            
-        case WWAN : view.backgroundColor = UIColor.yellowColor()
-        //displayLabel.text = "Reachabity with WWAN"
-            
-        default:return
+        case NOACCESS :
+            view.backgroundColor = UIColor.redColor()
+            dispatch_async(dispatch_get_main_queue()){
+             
+                let alert = UIAlertController(title: "No Internet Access", message: "Please make sure you are connected to the internet", preferredStyle: .Alert)
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .Default){
+                    action -> () in
+                    print("Cancel")
+                }
+                
+                let deleteAction = UIAlertAction(title: "Delete", style: .Destructive){
+                    action -> () in
+                    print("Deleted")
+                }
+                
+                let okAction = UIAlertAction(title: "Ok", style: .Default){
+                    action -> Void in
+                    print("Ok")
+                }
+                
+                alert.addAction(okAction)
+                alert.addAction(cancelAction)
+                alert.addAction(deleteAction)
+                
+                self.presentViewController(alert, animated: true, completion: nil)
+
+                
+            }
+                    default:
+            view.backgroundColor = UIColor.greenColor()
+            if videos.count > 0
+            {
+                runAPI()
+            }
+            else{
+                print("do not refresh API")
+            }
+           
         }
+    
     }
     
     deinit
@@ -85,6 +112,13 @@ class MusicVideoTVC: UITableViewController {
         cell.detailTextLabel?.text = video.vName
         
         return cell
+
+    }
+    
+    func runAPI(){
+        let api = APIManager()
+        api.loadData("https://itunes.apple.com/us/rss/topaudiobooks/limit=50/json",
+            completion: didLoadData)
 
     }
     
