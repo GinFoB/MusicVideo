@@ -18,11 +18,19 @@ class MusicVideoTVC: UITableViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector:
             "reachabilityStatusChanged", name: "reachabilityChanged", object: nil)
+       
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:
+            "preferredFontChange", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+
         
         reachabilityStatusChanged()
         
       
+    }
+    
+    func preferredFontChange(){
+        print("preferred Font has Change")
     }
     
     func didLoadData(videos: [Videos]){
@@ -92,6 +100,7 @@ class MusicVideoTVC: UITableViewController {
     deinit
     {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "reachabilityChanged", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -121,7 +130,7 @@ class MusicVideoTVC: UITableViewController {
     
     func runAPI(){
         let api = APIManager()
-        api.loadData("https://itunes.apple.com/us/rss/topaudiobooks/limit=200/json",
+        api.loadData("https://itunes.apple.com/us/rss/topaudiobooks/limit=20/json",
             completion: didLoadData)
 
     }

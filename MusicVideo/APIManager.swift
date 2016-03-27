@@ -49,10 +49,7 @@ class APIManager {
                                 completion(videos)
                             }
                         }
-                        
                     }
-                    
-                    
                 }
                 catch{
                         print("error in NSJSONSerialzation")
