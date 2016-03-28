@@ -123,13 +123,14 @@
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="9lJ-Br-40s" firstAttribute="top" secondItem="0me-Bh-NgH" secondAttribute="bottom" constant="1" id="7c4-YF-mFJ"/>
                             <constraint firstItem="MsU-J0-Ehz" firstAttribute="top" secondItem="zAp-Z4-N4X" secondAttribute="bottom" id="7cT-G8-FHb"/>
                             <constraint firstItem="fNN-GU-bp3" firstAttribute="leading" secondItem="0me-Bh-NgH" secondAttribute="leading" id="AQr-cf-GRv"/>
                             <constraint firstItem="9lJ-Br-40s" firstAttribute="centerY" secondItem="Mnt-fB-tGX" secondAttribute="centerY" id="Caa-JY-L5V"/>
                             <constraint firstItem="0me-Bh-NgH" firstAttribute="centerX" secondItem="MsU-J0-Ehz" secondAttribute="centerX" id="EE9-L4-qLb"/>
+                            <constraint firstItem="s2R-y0-Ycb" firstAttribute="top" secondItem="0me-Bh-NgH" secondAttribute="bottom" constant="13" id="FHK-2Q-Wxb"/>
                             <constraint firstItem="0me-Bh-NgH" firstAttribute="trailing" secondItem="fNN-GU-bp3" secondAttribute="trailing" id="FJg-hp-uxw"/>
                             <constraint firstItem="Mnt-fB-tGX" firstAttribute="trailing" secondItem="90y-yW-6Mg" secondAttribute="trailingMargin" id="Hcz-qu-19z"/>
                             <constraint firstItem="0me-Bh-NgH" firstAttribute="top" secondItem="zAp-Z4-N4X" secondAttribute="bottom" constant="68" id="MeW-g5-ws7"/>
@@ -137,10 +138,49 @@
                             <constraint firstItem="fNN-GU-bp3" firstAttribute="top" secondItem="9lJ-Br-40s" secondAttribute="bottom" constant="8" symbolic="YES" id="R30-AP-LBV"/>
                             <constraint firstAttribute="trailing" secondItem="0me-Bh-NgH" secondAttribute="trailing" id="T7L-G4-tHg"/>
                             <constraint firstItem="MsU-J0-Ehz" firstAttribute="leading" secondItem="90y-yW-6Mg" secondAttribute="leadingMargin" constant="-13" id="amA-vX-MBI"/>
+                            <constraint firstItem="0me-Bh-NgH" firstAttribute="centerX" secondItem="90y-yW-6Mg" secondAttribute="centerX" id="bjs-ce-QsY"/>
                             <constraint firstItem="0me-Bh-NgH" firstAttribute="centerX" secondItem="90y-yW-6Mg" secondAttribute="centerX" id="kZS-tG-4jA"/>
                             <constraint firstItem="Mnt-fB-tGX" firstAttribute="baseline" secondItem="9lJ-Br-40s" secondAttribute="baseline" id="lQK-nc-sv4"/>
                             <constraint firstItem="fNN-GU-bp3" firstAttribute="bottom" secondItem="s2R-y0-Ycb" secondAttribute="top" id="sCK-ko-7mm"/>
+                            <constraint firstAttribute="trailing" secondItem="0me-Bh-NgH" secondAttribute="trailing" id="u6H-fV-0jd"/>
+                            <constraint firstItem="0me-Bh-NgH" firstAttribute="top" secondItem="zAp-Z4-N4X" secondAttribute="bottom" constant="8" symbolic="YES" id="zTN-S8-xFX"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bjs-ce-QsY"/>
+                                <exclude reference="u6H-fV-0jd"/>
+                                <exclude reference="zTN-S8-xFX"/>
+                                <exclude reference="FHK-2Q-Wxb"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="MsU-J0-Ehz"/>
+                                <exclude reference="9lJ-Br-40s"/>
+                                <exclude reference="Mnt-fB-tGX"/>
+                                <exclude reference="fNN-GU-bp3"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7cT-G8-FHb"/>
+                                <exclude reference="amA-vX-MBI"/>
+                                <exclude reference="EE9-L4-qLb"/>
+                                <exclude reference="MeW-g5-ws7"/>
+                                <exclude reference="T7L-G4-tHg"/>
+                                <include reference="bjs-ce-QsY"/>
+                                <exclude reference="kZS-tG-4jA"/>
+                                <include reference="u6H-fV-0jd"/>
+                                <include reference="zTN-S8-xFX"/>
+                                <exclude reference="7c4-YF-mFJ"/>
+                                <exclude reference="Caa-JY-L5V"/>
+                                <exclude reference="OYq-C8-ea0"/>
+                                <exclude reference="AQr-cf-GRv"/>
+                                <exclude reference="R30-AP-LBV"/>
+                                <exclude reference="sCK-ko-7mm"/>
+                                <include reference="FHK-2Q-Wxb"/>
+                                <exclude reference="Hcz-qu-19z"/>
+                                <exclude reference="lQK-nc-sv4"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems>
                         <barButtonItem systemItem="play" id="RAB-XM-Dm2">
@@ -161,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fON-WQ-Vdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="359"/>
+            <point key="canvasLocation" x="1535" y="358.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tt3-cA-WZv">
