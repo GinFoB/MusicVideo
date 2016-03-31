@@ -237,6 +237,9 @@
                                                             <include reference="nRd-Io-chl"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="touchIdSec:" destination="rUD-CQ-w0r" eventType="valueChanged" id="QKV-04-zpl"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>

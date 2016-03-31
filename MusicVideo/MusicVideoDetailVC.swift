@@ -12,6 +12,7 @@ class MusicVideoDetailVC: UIViewController {
     
     var videos: Videos!
     
+    
     @IBOutlet weak var vName: UILabel!
     
     @IBOutlet weak var videoImage: UIImageView!
@@ -24,6 +25,7 @@ class MusicVideoDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         title = videos.vArtist
         
